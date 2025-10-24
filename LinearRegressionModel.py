@@ -10,7 +10,7 @@ pd.set_option("display.max_columns", None)
 pd.set_option("display.width", None)
 
 # load the dataset from excel
-file_path = "C:\\Users\\kyles\\Documents\\PulseBat Dataset.xlsx"
+file_path = "SOFE3770U-Final-Project-main/PulseBat Dataset.xlsx"
 df = pd.read_excel(file_path, sheet_name="SOC ALL")
 
 # pick u1 to u21 as input features and soh as what we want to predict
