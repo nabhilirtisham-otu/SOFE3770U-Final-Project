@@ -22,6 +22,6 @@ Input Data:
 - PulseBat Dataset.xlsx
 
 SOFE 3370U – Final Project
-Authors: [Kyle S., Kaira S., Colton B., Vlad S., Nabhil I.]
+Authors: Kyle S., Kaira S., Colton B., Vlad S., Nabhil I.
 Ontario Tech University
 Date: Oct. 23rd, 2025
