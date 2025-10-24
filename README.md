@@ -25,3 +25,6 @@ SOFE 3370U – Final Project
 Authors: Kyle S., Kaira S., Colton B., Vlad S., Nabhil I.
 Ontario Tech University
 Date: Oct. 23rd, 2025
+
+<img width="911" height="1002" alt="image" src="https://github.com/user-attachments/assets/6215a2de-301d-4b20-82c7-811c53adaa6f" />
+
