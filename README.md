@@ -10,7 +10,7 @@ Execution Requirements:
 - openpyxl
 
 Execution Steps:
-1. Download project foler
+1. Download project folder
 2. Install required libraries (see above)
 3. Open project in IDE
 4. Set the correct Python interpreter
