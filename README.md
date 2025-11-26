@@ -16,11 +16,13 @@ Execution Steps:
 2. Open project in IDE
 3. Install required libraries using "pip install streamlit pandas scikit-learn matplotlib openpyxl python-dotenv google-generativeai google-genai" (see above)
 4. Set the correct Python interpreter
-5. Run the script using "python -m streamlit run streamlit_app.py in the terminal
-6. Enter an SOH threshold
-7. Press the run SOH prediction model button
-8. View plotted results
-9. Ask AI chatbot questions by typing in question and then pressing ask AI
+5. go to https://aistudio.google.com/app/u/2/api-keys?_gl=1*1ym695r*_ga*NTcwOTQxNzgxLjE3NjQxMTY1NDQ.*_ga_P1DBVKWT6V*czE3NjQxOTM4NjYkbzQkZzEkdDE3NjQxOTM5MDAkajI2JGwwJGg2NzI5MjAzNjg. and get your API key
+6. Create a .env file and insert API the key as GEMINI_API_KEY="Your_API_KEY_HERE"
+7. Run the script using "python -m streamlit run streamlit_app.py in the terminal
+8. Enter an SOH threshold
+9. Press the run SOH prediction model button
+10. View plotted results
+11. Ask AI chatbot questions by typing in question and then pressing ask AI
 
 Input Data:
 - PulseBat Dataset.xlsx
