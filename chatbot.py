@@ -1,3 +1,5 @@
+import re
+
 #import api key from env file
 from dotenv import load_dotenv
 load_dotenv()
@@ -18,7 +20,7 @@ def get_gemini_response(user_input, soh_value=None):
     #give the api key to the chatbot client and make a connection
     client = genai.Client(api_key=api_key)
 
-    #give the chatbot context as what is happening with the battery and dataset
+    #give the chatbot context as to what is happening with the battery and dataset
     context = ""
     if soh_value is not None:
         context = f"The predicted battery SOH is {soh_value:.2f}%. "
@@ -32,6 +34,15 @@ def get_gemini_response(user_input, soh_value=None):
     "Be Polite, respectful, and professional.\n\n"
     f"User question: {user_input}"
 )
+
+    battery_keywords = [
+    "battery", "soh", "soc", "charge", "charging", "voltage", "cell",
+    "degradation", "capacity", "lithium", "cycle", "power", "drain",
+    "overheat", "storage"
+]
+
+    if not any(word in user_msg.lower() for word in battery_keywords):
+        return "I’m here specifically to help with battery health and performance. Please ask a battery-related question 🔋"
 
 
     #define what model of gemini we are using and generates response
