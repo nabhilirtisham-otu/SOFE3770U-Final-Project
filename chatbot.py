@@ -1,51 +1,48 @@
 import re
-
-#import api key from env file
-from dotenv import load_dotenv
-load_dotenv()
-
-#import the gemini chatbot
-from google import genai
 import os
+from dotenv import load_dotenv
+from google import genai
+
+# Load API key from .env
+load_dotenv()
 
 def get_gemini_response(user_input, soh_value=None):
 
-    #get the api key from the env file
+    # Get the API key
     api_key = os.getenv("GEMINI_API_KEY")
 
-    #error handler for api key
+    # Error handler for missing API key
     if not api_key:
-        return "API key not found. Check your .env file."
+        return "❌ API key not found. Please check your .env file."
 
-    #give the api key to the chatbot client and make a connection
+    # Create Gemini client
     client = genai.Client(api_key=api_key)
 
-    #give the chatbot context as to what is happening with the battery and dataset
+    # Build context using SOH value
     context = ""
     if soh_value is not None:
-        context = f"The predicted battery SOH is {soh_value:.2f}%. "
+        context = f"The predicted battery State of Health (SOH) is {soh_value:.2f}%. "
 
-    #tell the chatbot the setting and how to act when asked questions
-    prompt = context + (
-    "You are a professional battery health assistant for a research project. "
-    "You must ONLY answer questions related to batteries, battery health, charging, safety, maintenance, and SOH. "
-    "If the user's question is NOT related to batteries, you must politely say you cannot answer it and redirect them to battery questions. "
-    "Do not answer off-topic questions. "
-    "Be Polite, respectful, and professional.\n\n"
-    f"User question: {user_input}"
-)
-
+    # Battery topic guard list
     battery_keywords = [
-    "battery", "soh", "soc", "charge", "charging", "voltage", "cell",
-    "degradation", "capacity", "lithium", "cycle", "power", "drain",
-    "overheat", "storage"
-]
+        "battery", "soh", "soc", "charge", "charging", "voltage", "cell",
+        "degradation", "capacity", "lithium", "cycle", "power", "drain",
+        "overheat", "storage", "temperature", "health", "pack"
+    ]
 
-    if not any(word in user_msg.lower() for word in battery_keywords):
-        return "I’m here specifically to help with battery health and performance. Please ask a battery-related question 🔋"
+    # Block unrelated questions
+    if not any(word in user_input.lower() for word in battery_keywords):
+        return "🔋 I can only answer battery-related questions. Please ask about battery health, charging, SOH, lifespan, or safety."
 
+    # AI instruction + prompt
+    prompt = context + (
+        "You are a professional battery health assistant for a university research project. "
+        "You only answer questions related to batteries, battery health, charging, safety, maintenance, lifecycle, and SOH. "
+        "Respond clearly and professionally.\n\n"
+        f"User Question: {user_input}"
+    )
 
-    #define what model of gemini we are using and generates response
+    # Generate response
     response = client.models.generate_content(
         model="models/gemini-2.5-flash",
         contents=prompt

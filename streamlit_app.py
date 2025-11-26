@@ -4,9 +4,17 @@ import os
 import sys
 from chatbot import get_gemini_response
 
+# ---------------- CONFIG ----------------
+
 st.set_page_config(page_title="Battery Health AI", layout="centered")
 
-BASE_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "LinearRegressionModel.py")
+PYTHON_PATH = sys.executable
+SOH_FILE = os.path.join(BASE_DIR, "latest_soh.txt")
+PLOT_FILE = os.path.join(BASE_DIR, "soh_plot.png")
+
+# ---------------- TITLE ----------------
 
 st.title("🔋 Battery Health Assistant")
 st.caption("SOH Prediction + Gemini AI Advisor")
@@ -17,20 +25,19 @@ st.header("💬 Battery Advisor")
 
 user_msg = st.text_input("Ask about battery health, charging, lifespan, or safety:")
 
-soh_file = os.path.join(BASE_DIR, "latest_soh.txt")
 soh_value = None
 
-if os.path.exists(soh_file):
+if os.path.exists(SOH_FILE):
     try:
-        with open(soh_file) as f:
+        with open(SOH_FILE, "r") as f:
             soh_value = float(f.read().strip())
         st.metric("Predicted Battery SOH", f"{soh_value:.4f}")
-    except:
-        st.error("Error reading SOH file")
+    except Exception as e:
+        st.error(f"Error reading SOH file: {e}")
 
 if st.button("Ask AI"):
     if user_msg.strip() == "":
-        st.warning("Enter a question.")
+        st.warning("Please enter a question.")
     elif soh_value is None:
         st.error("Run the model first to generate SOH.")
     else:
@@ -51,30 +58,48 @@ threshold = st.number_input(
 )
 
 if st.button("Run SOH Prediction Model"):
+
     env = os.environ.copy()
     env["SOH_THRESHOLD"] = str(threshold)
 
-    with st.spinner("Running model..."):
+    with st.spinner("Running regression model..."):
+
         result = subprocess.run(
-            [os.sys.executable, "LinearRegressionModel.py"],
+            [PYTHON_PATH, MODEL_PATH],
             cwd=BASE_DIR,
             env=env,
             capture_output=True,
-            text=True
+            text=True,
+            shell=False
         )
 
-    st.text_area("Model Output", result.stdout, height=300)
+    # ---------- OUTPUT ----------
+
+    st.subheader("Model Output (STDOUT)")
+    st.code(result.stdout)
 
     if result.stderr:
-        st.error("Errors:")
-        st.text(result.stderr)
+        st.subheader("Model Errors (STDERR)")
+        st.code(result.stderr)
 
-    plot_path = os.path.join(BASE_DIR, "soh_plot.png")
+    # ---------- LOAD PLOT ----------
 
-    if os.path.exists(plot_path):
-        st.image(plot_path, caption="Predicted vs True SOH", use_column_width=True)
+    if os.path.exists(PLOT_FILE):
+        st.image(PLOT_FILE, caption="Predicted vs True SOH", use_container_width=True)
     else:
-        st.warning("Plot file not found.")
+        st.warning("Plot file not found. Model may have failed.")
+
+    # ---------- LOAD SOH ----------
+
+    if os.path.exists(SOH_FILE):
+        try:
+            with open(SOH_FILE, "r") as f:
+                soh_value = float(f.read().strip())
+            st.success(f"SOH loaded successfully: {soh_value:.4f}")
+        except:
+            st.error("SOH file exists but could not be read.")
+    else:
+        st.warning("SOH file not generated.")
 
 # ---------------- FOOTER ----------------
 
