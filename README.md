@@ -13,8 +13,8 @@ Execution Requirements:
 
 Execution Steps:
 1. Download project folder
-2. Install required libraries using "pip install streamlit pandas scikit-learn matplotlib openpyxl python-dotenv google-generativeai google-genai" (see above)
-3. Open project in IDE
+2. Open project in IDE
+3. Install required libraries using "pip install streamlit pandas scikit-learn matplotlib openpyxl python-dotenv google-generativeai google-genai" (see above)
 4. Set the correct Python interpreter
 5. Run the script using "python -m streamlit run streamlit_app.py in the terminal
 6. Enter an SOH threshold
