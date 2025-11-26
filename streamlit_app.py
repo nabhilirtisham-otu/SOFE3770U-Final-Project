@@ -4,37 +4,38 @@ import os
 import sys
 from chatbot import get_gemini_response
 
-# ---------------- CONFIG ----------------
 
+#streamlit page styling
 st.set_page_config(page_title="Battery Health AI", layout="centered")
 
+#define files to used in the rest of the code 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "LinearRegressionModel.py")
 PYTHON_PATH = sys.executable
 SOH_FILE = os.path.join(BASE_DIR, "latest_soh.txt")
 PLOT_FILE = os.path.join(BASE_DIR, "soh_plot.png")
 
-# ---------------- TITLE ----------------
-
-st.title("🔋 Battery Health Assistant")
+#streamlit page styling
+st.title("Battery Health Assistant")
 st.caption("SOH Prediction + Gemini AI Advisor")
+st.header("Battery Advisor")
 
-# ---------------- CHAT ----------------
-
-st.header("💬 Battery Advisor")
-
+#creates user input box 
 user_msg = st.text_input("Ask about battery health, charging, lifespan, or safety:")
 
+#initialize soh
 soh_value = None
 
+#open and read the soh file 
 if os.path.exists(SOH_FILE):
     try:
         with open(SOH_FILE, "r") as f:
             soh_value = float(f.read().strip())
-        st.metric("Predicted Battery SOH", f"{soh_value:.4f}")
+        st.metric("Predicted Battery SOH", f"{soh_value:.4f}") #print predicted SOH value
     except Exception as e:
         st.error(f"Error reading SOH file: {e}")
 
+#handle user inputs with correct error handling
 if st.button("Ask AI"):
     if user_msg.strip() == "":
         st.warning("Please enter a question.")
@@ -45,10 +46,11 @@ if st.button("Ask AI"):
         st.success("AI Response")
         st.write(reply)
 
-# ---------------- MODEL ----------------
 
-st.header("📊 Linear Regression Model")
+#streamlit styling
+st.header("Linear Regression Model")
 
+#threshold scaler 
 threshold = st.number_input(
     "SOH Fail Threshold",
     min_value=0.0,
@@ -57,13 +59,17 @@ threshold = st.number_input(
     step=0.05
 )
 
+#make button for running the regression model
 if st.button("Run SOH Prediction Model"):
 
+    #create variables to be passed to regression model
     env = os.environ.copy()
     env["SOH_THRESHOLD"] = str(threshold)
 
+    #streamlit styling
     with st.spinner("Running regression model..."):
 
+        #runs the linear regression model with the defined executeable
         result = subprocess.run(
             [PYTHON_PATH, MODEL_PATH],
             cwd=BASE_DIR,
@@ -73,35 +79,34 @@ if st.button("Run SOH Prediction Model"):
             shell=False
         )
 
-    # ---------- OUTPUT ----------
-
-    st.subheader("Model Output (STDOUT)")
+    #streamlit styling
+    st.subheader("Model Output")
     st.code(result.stdout)
 
+    #error handling in case the regression model fails
     if result.stderr:
-        st.subheader("Model Errors (STDERR)")
+        st.subheader("Model Errors")
         st.code(result.stderr)
 
-    # ---------- LOAD PLOT ----------
-
+    
+    #loads the plot.py into a picture and displays it
     if os.path.exists(PLOT_FILE):
         st.image(PLOT_FILE, caption="Predicted vs True SOH", use_container_width=True)
     else:
         st.warning("Plot file not found. Model may have failed.")
 
-    # ---------- LOAD SOH ----------
-
+    
+    #opens and reads the SOH file
     if os.path.exists(SOH_FILE):
         try:
             with open(SOH_FILE, "r") as f:
                 soh_value = float(f.read().strip())
-            st.success(f"SOH loaded successfully: {soh_value:.4f}")
+            st.success(f"SOH loaded successfully: {soh_value:.4f}") #prints SOH values
         except:
             st.error("SOH file exists but could not be read.")
     else:
         st.warning("SOH file not generated.")
 
-# ---------------- FOOTER ----------------
-
+#streamlit styling 
 st.markdown("---")
 st.caption("SOFE3770U Final Project | Battery Health AI")
