@@ -34,4 +34,6 @@ https://github.com/nabhilirtisham-otu/SOFE3770U-Final-Project
 
 <img width="911" height="1002" alt="image" src="https://github.com/user-attachments/assets/6215a2de-301d-4b20-82c7-811c53adaa6f" />
 
+<img width="806" height="785" alt="image" src="https://github.com/user-attachments/assets/8c92bde0-7bff-4e80-ae95-0ecc6335e3f3" />
+
 
