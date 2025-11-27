@@ -21,14 +21,37 @@ def get_gemini_response(user_input, soh_value=None):
     #Build context using SOH value
     context = ""
     if soh_value is not None:
-        context = f"The predicted battery State of Health (SOH) is {soh_value:.2f}%. "
+        context = f"The predicted battery State of Health (SOH) is {soh_value:.2f}. "
 
     #Battery topic guard list
     battery_keywords = [
-        "battery", "soh", "soc", "charge", "charging", "voltage", "cell",
-        "degradation", "capacity", "lithium", "cycle", "power", "drain",
-        "overheat", "storage", "temperature", "health", "pack"
-    ]
+    "battery", "soh", "soc", "charge", "charging", "voltage", "cell",
+    "degradation", "capacity", "lithium", "cycle", "power", "drain",
+    "overheat", "storage", "temperature", "health", "pack", "batteries",
+    "state of health", "health index", "remaining useful life", "rul",
+    "aging", "wear", "capacity loss", "capacity fade",
+    "calendar aging", "cycle aging", "lifespan", "lifetime",
+    "state of charge", "depth of discharge", "dod",
+    "cycle count", "full equivalent cycles", "fec",
+    "discharge", "discharging", "overcharge", "overcharging",
+    "overdischarge", "fast charge", "trickle charge",
+    "internal resistance", "impedance", "voltage sag", "voltage drop",
+    "efficiency", "energy density", "power density",
+    "battery health", "health monitoring", "health estimation",
+    "diagnostics", "fault detection", "condition monitoring",
+    "predictive maintenance", "trend analysis", "telemetry",
+    "data logging", "health reporting",
+    "capacity test", "load test", "impedance test", "pulse test",
+    "open circuit voltage", "ocv", "cycle testing",
+    "thermal stress", "overheating", "heat exposure",
+    "cold performance", "high c-rate", "fast charging",
+    "thermal runaway", "swelling", "leakage", "internal short",
+    "dendrite", "gas generation", "electrolyte breakdown",
+    "end of life", "eol", "second life", "reconditioning",
+    "repurposing", "recycling"
+]
+
+    
 
     #Block unrelated questions
     if not any(word in user_input.lower() for word in battery_keywords):

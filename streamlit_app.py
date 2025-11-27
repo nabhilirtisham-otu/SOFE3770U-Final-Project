@@ -81,7 +81,7 @@ if st.button("Run SOH Prediction Model"):
 
     #streamlit styling
     st.subheader("Model Output")
-    st.code(result.stdout)
+    st.code(result.stdout) #prints all true and predicted SOH values as well as the status
 
     #error handling in case the regression model fails
     if result.stderr:
@@ -101,7 +101,7 @@ if st.button("Run SOH Prediction Model"):
         try:
             with open(SOH_FILE, "r") as f:
                 soh_value = float(f.read().strip())
-            st.success(f"SOH loaded successfully: {soh_value:.4f}") #prints SOH values
+            st.success(f"SOH loaded successfully: {soh_value:.4f}") #prints SOH value
         except:
             st.error("SOH file exists but could not be read.")
     else:
