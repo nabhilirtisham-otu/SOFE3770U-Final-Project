@@ -1,0 +1,706 @@
+{
+    "metrics": {
+        "r2": 0.6560883556730336,
+        "mse": 0.001498343576005611,
+        "mae": 0.03027549427174283,
+        "threshold": 0.6,
+        "avg_soh": 0.8149627483270849,
+        "pass_count": 134,
+        "fail_count": 0
+    },
+    "cells": [
+        {
+            "true soh": 0.7794761904761904,
+            "predicted soh": 0.7407585923881888,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8729523809523809,
+            "predicted soh": 0.8742591626714207,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7672380952380952,
+            "predicted soh": 0.8352567294068427,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.830952380952381,
+            "predicted soh": 0.7806906731366388,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8784761904761904,
+            "predicted soh": 0.8878941473633253,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7336190476190476,
+            "predicted soh": 0.7296654906750666,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8211904761904761,
+            "predicted soh": 0.8055108733671537,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6987619047619047,
+            "predicted soh": 0.7814921117866538,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8173333333333332,
+            "predicted soh": 0.8068711744979202,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9045238095238095,
+            "predicted soh": 0.946880732416246,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8417142857142857,
+            "predicted soh": 0.8559712965904671,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8571904761904762,
+            "predicted soh": 0.8994360153258603,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8473333333333334,
+            "predicted soh": 0.807249443145813,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8204285714285714,
+            "predicted soh": 0.8470144036435121,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7983333333333333,
+            "predicted soh": 0.8132274294196398,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8571904761904762,
+            "predicted soh": 0.8843057387020741,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8173333333333332,
+            "predicted soh": 0.7685520186161119,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7368571428571429,
+            "predicted soh": 0.7940694114436075,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7809999999999999,
+            "predicted soh": 0.7889593880873909,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7886666666666666,
+            "predicted soh": 0.8212965619964256,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8211904761904761,
+            "predicted soh": 0.8060628895623756,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9111428571428571,
+            "predicted soh": 0.835348424759899,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8209047619047619,
+            "predicted soh": 0.779016289447525,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6598095238095237,
+            "predicted soh": 0.7191554901835877,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8366666666666666,
+            "predicted soh": 0.8101647113966726,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8278095238095238,
+            "predicted soh": 0.8595347576353296,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7511904761904761,
+            "predicted soh": 0.7608338770210485,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8546666666666666,
+            "predicted soh": 0.8189691476017051,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8702380952380951,
+            "predicted soh": 0.8116214302436466,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8278095238095238,
+            "predicted soh": 0.8459835741345847,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9229999999999999,
+            "predicted soh": 0.8797558831846137,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9072380952380952,
+            "predicted soh": 0.8411292725975477,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7819523809523808,
+            "predicted soh": 0.8181841999377033,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.880904761904762,
+            "predicted soh": 0.8885328831176258,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8573333333333333,
+            "predicted soh": 0.8448964636030132,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9229999999999999,
+            "predicted soh": 0.9503163736181994,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.715047619047619,
+            "predicted soh": 0.7540573362572607,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7886666666666666,
+            "predicted soh": 0.805795758864206,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7983333333333333,
+            "predicted soh": 0.7746096722630602,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8173333333333332,
+            "predicted soh": 0.7671544567484139,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8211904761904761,
+            "predicted soh": 0.8186424385467168,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9121904761904761,
+            "predicted soh": 0.877862095632806,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7809999999999999,
+            "predicted soh": 0.76105787244009,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8378095238095238,
+            "predicted soh": 0.8006315130073736,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8204285714285714,
+            "predicted soh": 0.8265383833667164,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8378095238095238,
+            "predicted soh": 0.8032478031418568,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7886666666666666,
+            "predicted soh": 0.8242149172915196,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9121904761904761,
+            "predicted soh": 0.8829617487736448,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7511904761904761,
+            "predicted soh": 0.6808414421134037,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6874761904761905,
+            "predicted soh": 0.683275181698888,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8378095238095238,
+            "predicted soh": 0.8150034447581538,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7672380952380952,
+            "predicted soh": 0.7604607211077754,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7983333333333333,
+            "predicted soh": 0.8059603632732992,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9229999999999999,
+            "predicted soh": 0.850703007844138,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7672380952380952,
+            "predicted soh": 0.7848360681151041,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8607619047619047,
+            "predicted soh": 0.8126611691705525,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6598095238095237,
+            "predicted soh": 0.7327437841419728,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.880904761904762,
+            "predicted soh": 0.8558263898382199,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9072380952380952,
+            "predicted soh": 0.8875515054672922,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8546666666666666,
+            "predicted soh": 0.8531063384041664,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8366666666666666,
+            "predicted soh": 0.8394034127160657,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8512380952380952,
+            "predicted soh": 0.7934400007739759,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8573333333333333,
+            "predicted soh": 0.846878025784604,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7809999999999999,
+            "predicted soh": 0.818544270323506,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8946190476190476,
+            "predicted soh": 0.8546667924422655,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8956666666666666,
+            "predicted soh": 0.8187380131765059,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8729523809523809,
+            "predicted soh": 0.8321499293169259,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6817619047619047,
+            "predicted soh": 0.704989423064311,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7122857142857143,
+            "predicted soh": 0.755609365473247,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6598095238095237,
+            "predicted soh": 0.7263961406565889,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8366666666666666,
+            "predicted soh": 0.8306309856167919,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8573333333333333,
+            "predicted soh": 0.8606285896382806,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8729523809523809,
+            "predicted soh": 0.863205512787089,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7122857142857143,
+            "predicted soh": 0.7598607819871424,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7522380952380953,
+            "predicted soh": 0.730004804968515,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.831047619047619,
+            "predicted soh": 0.8266485266605406,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.831047619047619,
+            "predicted soh": 0.812700349043765,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8206666666666667,
+            "predicted soh": 0.8167627560399415,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8366666666666666,
+            "predicted soh": 0.8159563634923392,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8512380952380952,
+            "predicted soh": 0.7923829156692994,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6995238095238095,
+            "predicted soh": 0.804292381676972,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8211904761904761,
+            "predicted soh": 0.8107940710077051,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.880904761904762,
+            "predicted soh": 0.8377712346812762,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6987619047619047,
+            "predicted soh": 0.7549613576898357,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8417142857142857,
+            "predicted soh": 0.8481708531732997,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7712857142857142,
+            "predicted soh": 0.7907981941716278,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8417142857142857,
+            "predicted soh": 0.8535146708944259,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6817619047619047,
+            "predicted soh": 0.7317050485262646,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7675714285714286,
+            "predicted soh": 0.707333667655127,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8211904761904761,
+            "predicted soh": 0.8293511540944811,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8026666666666666,
+            "predicted soh": 0.741127013592453,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9111428571428571,
+            "predicted soh": 0.9619530286911191,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8473333333333334,
+            "predicted soh": 0.8278706805624614,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8571904761904762,
+            "predicted soh": 0.8107553614769989,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8278095238095238,
+            "predicted soh": 0.8328935340004611,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8888095238095238,
+            "predicted soh": 0.8269209758870977,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7815238095238095,
+            "predicted soh": 0.8339865506286221,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8571904761904762,
+            "predicted soh": 0.8714267534974587,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6995238095238095,
+            "predicted soh": 0.7218398627135221,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8209047619047619,
+            "predicted soh": 0.7983705743511456,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8473333333333334,
+            "predicted soh": 0.8343729842053227,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8956666666666666,
+            "predicted soh": 0.8792469867679591,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.870095238095238,
+            "predicted soh": 0.852880445221202,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6195238095238095,
+            "predicted soh": 0.7451533437126505,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8204285714285714,
+            "predicted soh": 0.8183505587319564,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.855,
+            "predicted soh": 0.8389920382561931,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6987619047619047,
+            "predicted soh": 0.8032528151067018,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8702380952380951,
+            "predicted soh": 0.8731107971713206,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8378095238095238,
+            "predicted soh": 0.8281702139191784,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8702380952380951,
+            "predicted soh": 0.8761317035443019,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8173333333333332,
+            "predicted soh": 0.767037030574584,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6874761904761905,
+            "predicted soh": 0.6349789969606823,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7988095238095237,
+            "predicted soh": 0.810786266559929,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8546666666666666,
+            "predicted soh": 0.8252806822222558,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7488571428571428,
+            "predicted soh": 0.7634717626277725,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.6987619047619047,
+            "predicted soh": 0.762579571470325,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8473333333333334,
+            "predicted soh": 0.8291976648940311,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7712857142857142,
+            "predicted soh": 0.7881710834625926,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8729523809523809,
+            "predicted soh": 0.8532636318132907,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8784761904761904,
+            "predicted soh": 0.8987854671373432,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9229999999999999,
+            "predicted soh": 0.9132050254715187,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.831047619047619,
+            "predicted soh": 0.8458548986344985,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8026666666666666,
+            "predicted soh": 0.8025980375979733,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.870095238095238,
+            "predicted soh": 0.8415193087115247,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7988095238095237,
+            "predicted soh": 0.7875589666497111,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7983333333333333,
+            "predicted soh": 0.7997624833710395,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8061428571428572,
+            "predicted soh": 0.8102473507440626,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.9121904761904761,
+            "predicted soh": 0.8816536418002903,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.870095238095238,
+            "predicted soh": 0.8429082086301483,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.831047619047619,
+            "predicted soh": 0.8337650036755084,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8725714285714286,
+            "predicted soh": 0.831370639416213,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8061428571428572,
+            "predicted soh": 0.8384519168496487,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.7672380952380952,
+            "predicted soh": 0.7775758063391969,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.8725714285714286,
+            "predicted soh": 0.8612785399823331,
+            "status": "pass"
+        }
+    ],
+    "feature_importance": {
+        "U17": 42.93852230199879,
+        "U3": -13.680280624331804,
+        "U7": -10.755158749784702,
+        "U21": -10.027137311452016,
+        "U9": -8.810711038498392,
+        "U5": 6.852395855963971,
+        "U1": 6.525140508537594,
+        "U13": -5.493416645672575,
+        "U11": -4.299611180092708,
+        "U19": -3.7377720373769767,
+        "U15": -3.1474975319429914,
+        "U12": 1.0889110147244727,
+        "U14": 1.0659714147304291,
+        "U6": -1.038548704284021,
+        "U18": -0.8623608488433049,
+        "U8": 0.6058412454906307,
+        "U4": 0.5829629263856845,
+        "U10": 0.4647636650518354,
+        "U2": 0.3755366662853199,
+        "U16": 0.3728958269583441,
+        "U20": 0.09293518663700462
+    }
+}

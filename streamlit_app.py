@@ -2,8 +2,8 @@ import streamlit as st
 import subprocess
 import os
 import sys
+import json
 from chatbot import get_gemini_response
-
 
 #streamlit page styling
 st.set_page_config(page_title="Battery Health AI", layout="centered")
@@ -12,7 +12,7 @@ st.set_page_config(page_title="Battery Health AI", layout="centered")
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "LinearRegressionModel.py")
 PYTHON_PATH = sys.executable
-SOH_FILE = os.path.join(BASE_DIR, "latest_soh.txt")
+REPORT_FILE = os.path.join(BASE_DIR, "battery_report.json")
 PLOT_FILE = os.path.join(BASE_DIR, "soh_plot.png")
 
 #streamlit page styling
@@ -23,29 +23,36 @@ st.header("Battery Advisor")
 #creates user input box 
 user_msg = st.text_input("Ask about battery health, charging, lifespan, or safety:")
 
-#initialize soh
-soh_value = None
+#initialize report
+report = None
 
-#open and read the soh file 
-if os.path.exists(SOH_FILE):
+#load results file if it exists
+if os.path.exists(REPORT_FILE):
     try:
-        with open(SOH_FILE, "r") as f:
-            soh_value = float(f.read().strip())
-        st.metric("Predicted Battery SOH", f"{soh_value:.4f}") #print predicted SOH value
-    except Exception as e:
-        st.error(f"Error reading SOH file: {e}")
+        with open(REPORT_FILE, "r") as f:
+            report = json.load(f)
 
-#handle user inputs with correct error handling
+        avg_soh = report["metrics"]["avg_soh"]
+        r2 = report["metrics"]["r2"]
+        mse = report["metrics"]["mse"]
+        mae = report["metrics"]["mae"]
+
+        st.metric("Predicted Battery SOH", f"{avg_soh:.4f}")
+        st.caption(f"R²: {r2:.4f} | MSE: {mse:.4f} | MAE: {mae:.4f}")
+
+    except Exception as e:
+        st.error(f"Error reading report file: {e}")
+
+#handle user inputs
 if st.button("Ask AI"):
     if user_msg.strip() == "":
         st.warning("Please enter a question.")
-    elif soh_value is None:
+    elif report is None:
         st.error("Run the model first to generate SOH.")
     else:
-        reply = get_gemini_response(user_msg, soh_value)
+        reply = get_gemini_response(user_msg, report)
         st.success("AI Response")
         st.write(reply)
-
 
 #streamlit styling
 st.header("Linear Regression Model")
@@ -81,31 +88,39 @@ if st.button("Run SOH Prediction Model"):
 
     #streamlit styling
     st.subheader("Model Output")
-    st.code(result.stdout) #prints all true and predicted SOH values as well as the status
+    st.code(result.stdout)
 
-    #error handling in case the regression model fails
+    #error handling
     if result.stderr:
         st.subheader("Model Errors")
         st.code(result.stderr)
 
-    
-    #loads the plot.py into a picture and displays it
+    #plot loading
     if os.path.exists(PLOT_FILE):
         st.image(PLOT_FILE, caption="Predicted vs True SOH", use_container_width=True)
     else:
         st.warning("Plot file not found. Model may have failed.")
 
-    
-    #opens and reads the SOH file
-    if os.path.exists(SOH_FILE):
+    #reload json after run
+    if os.path.exists(REPORT_FILE):
         try:
-            with open(SOH_FILE, "r") as f:
-                soh_value = float(f.read().strip())
-            st.success(f"SOH loaded successfully: {soh_value:.4f}") #prints SOH value
+            with open(REPORT_FILE, "r") as f:
+                report = json.load(f)
+
+            avg_soh = report["metrics"]["avg_soh"]
+            pass_count = report["metrics"]["pass_count"]
+            fail_count = report["metrics"]["fail_count"]
+
+            st.success(f"SOH Loaded Successfully: {avg_soh:.4f}")
+            st.caption(f"PASS: {pass_count} | FAIL: {fail_count}")
+
+            st.subheader("Cell Pass / Fail Results")
+            st.dataframe(report["cells"])
+
         except:
-            st.error("SOH file exists but could not be read.")
+            st.error("battery_report.json exists but could not be read.")
     else:
-        st.warning("SOH file not generated.")
+        st.warning("battery_report.json not generated.")
 
 #streamlit styling 
 st.markdown("---")

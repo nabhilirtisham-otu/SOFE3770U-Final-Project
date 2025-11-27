@@ -1,71 +1,80 @@
 import re
 import os
+import json
 from dotenv import load_dotenv
 from google import genai
 
-#Load API key from .env
+# Load API key from .env
 load_dotenv()
 
-def get_gemini_response(user_input, soh_value=None):
 
-    #Get the API key
+# ---------------- LOAD MODEL RESULTS ----------------
+def load_battery_report():
+    try:
+        with open("battery_report.json", "r") as f:
+            return json.load(f)
+    except:
+        return None
+
+
+# ---------------- CHATBOT FUNCTION ----------------
+def get_gemini_response(user_input, battery_report):
+
     api_key = os.getenv("GEMINI_API_KEY")
-
-    #Error handler for missing API key
     if not api_key:
-        return "API key not found. Please check your .env file."
+        return "ERROR: GEMINI_API_KEY not found in .env file."
 
-    #Create Gemini client
     client = genai.Client(api_key=api_key)
 
-    #Build context using SOH value
-    context = ""
-    if soh_value is not None:
-        context = f"The predicted battery State of Health (SOH) is {soh_value:.2f}. "
-
-    #Battery topic guard list
     battery_keywords = [
-    "battery", "soh", "soc", "charge", "charging", "voltage", "cell",
-    "degradation", "capacity", "lithium", "cycle", "power", "drain",
-    "overheat", "storage", "temperature", "health", "pack", "batteries",
-    "state of health", "health index", "remaining useful life", "rul",
-    "aging", "wear", "capacity loss", "capacity fade",
-    "calendar aging", "cycle aging", "lifespan", "lifetime",
-    "state of charge", "depth of discharge", "dod",
-    "cycle count", "full equivalent cycles", "fec",
-    "discharge", "discharging", "overcharge", "overcharging",
-    "overdischarge", "fast charge", "trickle charge",
-    "internal resistance", "impedance", "voltage sag", "voltage drop",
-    "efficiency", "energy density", "power density",
-    "battery health", "health monitoring", "health estimation",
-    "diagnostics", "fault detection", "condition monitoring",
-    "predictive maintenance", "trend analysis", "telemetry",
-    "data logging", "health reporting",
-    "capacity test", "load test", "impedance test", "pulse test",
-    "open circuit voltage", "ocv", "cycle testing",
-    "thermal stress", "overheating", "heat exposure",
-    "cold performance", "high c-rate", "fast charging",
-    "thermal runaway", "swelling", "leakage", "internal short",
-    "dendrite", "gas generation", "electrolyte breakdown",
-    "end of life", "eol", "second life", "reconditioning",
-    "repurposing", "recycling"
-]
+        "battery", "soh", "soc", "charge", "charging", "voltage", "cell",
+        "degradation", "capacity", "lithium", "cycle", "power", "drain",
+        "overheat", "storage", "temperature", "health", "pack", "batteries",
+        "state of health", "rul", "lifespan", "aging", "capacity fade",
+        "fast charge", "overcharging", "overdischarge", "internal resistance",
+        "impedance", "thermal runaway", "swelling", "fault",
+        "diagnostics", "maintenance", "prediction", "health monitoring"
+    ]
 
-    
-
-    #Block unrelated questions
     if not any(word in user_input.lower() for word in battery_keywords):
-        return "I can only answer battery-related questions. Please ask about battery health, charging, SOH, lifespan, or safety."
+        return "I only answer battery-related questions."
 
-    #AI instruction + prompt
+    report = load_battery_report()
+
+    context = ""
+
+    if report:
+        m = report["metrics"]
+        cells = report["cells"]
+        importance = report["feature_importance"]
+
+        context += f"""
+MODEL PERFORMANCE:
+R²: {m["r2"]:.4f}
+MSE: {m["mse"]:.4f}
+MAE: {m["mae"]:.4f}
+
+SOH SUMMARY:
+Average SOH: {m["avg_soh"]:.2f}
+Threshold: {m["threshold"]}
+PASS: {m["pass_count"]}   FAIL: {m["fail_count"]}
+
+CELL STATUS:
+"""
+
+        for i, c in enumerate(cells):
+            context += f"Cell {i+1}: True={c['true soh']:.3f}, Pred={c['predicted soh']:.3f}, Status={c['status']}\n"
+
+        context += "\nMOST IMPORTANT VOLTAGE FEATURES:\n"
+        for k in list(importance.keys())[:5]:
+            context += f"{k}: {importance[k]:.4f}\n"
+
     prompt = context + (
-        "You are a professional battery health assistant for a university research project. "
-        "You only answer questions related to batteries, battery health, charging, safety, maintenance, lifecycle, and SOH. "
-        "Respond clearly and professionally.\n\n"
+        "\nYou are a battery diagnostics assistant using real model data above. "
+        "Explain performance, failures, safety, risks and recommendations clearly.\n\n"
         f"User Question: {user_input}"
     )
 
-    #Generate response and define model
     response = client.models.generate_content(
         model="models/gemini-2.5-flash",
         contents=prompt
