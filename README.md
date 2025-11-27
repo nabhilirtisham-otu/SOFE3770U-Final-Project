@@ -1,6 +1,6 @@
 # SOFE377U Final Project - Part 2: Linear Regression Model
 
-This section of the project uses a linear regression model to predict the SOH of a battery pack based on 21 voltage readings. Using a threshold (configurable, with default 0.6), the model reads several clusters of battery pack values from the PulseBat dataset Excel file, evaluates the performance of the model using different metrics (R^2, MSE, MAE), and displays a table with true/predicted SOH and pass/fail results. The table values are plotted on a graph plotting the true SOH against the predicted SOH for visual comparison.
+This project uses a linear regression model to predict the SOH of a battery pack based on 21 voltage readings. Using a threshold (configurable, with default 0.6), the model reads several clusters of battery pack values from the PulseBat dataset Excel file, evaluates the performance of the model using different metrics (R^2, MSE, MAE), and displays a table with true/predicted SOH and pass/fail results. The table values are plotted on a graph plotting the true SOH against the predicted SOH for visual comparison. It then exports this information where it is used by the gemini AI API. The project uses a streamlit frontend to display the information. 
 
 Execution Requirements:
 - Python 3.8 or higher
@@ -8,15 +8,22 @@ Execution Requirements:
 - scikit-learn
 - matplotlib
 - openpyxl
+- google-genai
+- google-generativeai
 
 Execution Steps:
 1. Download project folder
-2. Install required libraries (see above)
-3. Open project in IDE
-4. Set the correct Python interpreter
-5. Run the script
-6. Enter an SOH threshold
-7. View plotted results
+2. Open project in IDE
+3. cd SOFE3770U-Final-Project-main
+4. Install required libraries using "pip install streamlit pandas scikit-learn matplotlib openpyxl python-dotenv google-generativeai google-genai" (see above)
+5. Set the correct Python interpreter
+6. go to https://aistudio.google.com/app/u/2/api-keys?_gl=1*1ym695r*_ga*NTcwOTQxNzgxLjE3NjQxMTY1NDQ.*_ga_P1DBVKWT6V*czE3NjQxOTM4NjYkbzQkZzEkdDE3NjQxOTM5MDAkajI2JGwwJGg2NzI5MjAzNjg. and get your API key
+7. Create a .env file and insert API the key as GEMINI_API_KEY="Your_API_KEY_HERE"
+8. Run the script using "python -m streamlit run streamlit_app.py in the terminal
+9. Enter an SOH threshold
+10. Press the run SOH prediction model button
+11. View plotted results
+12. Ask AI chatbot questions by typing in question and then pressing ask AI
 
 Input Data:
 - PulseBat Dataset.xlsx
@@ -29,4 +36,7 @@ Date: Oct. 23rd, 2025
 https://github.com/nabhilirtisham-otu/SOFE3770U-Final-Project
 
 <img width="911" height="1002" alt="image" src="https://github.com/user-attachments/assets/6215a2de-301d-4b20-82c7-811c53adaa6f" />
+
+<img width="806" height="785" alt="image" src="https://github.com/user-attachments/assets/8c92bde0-7bff-4e80-ae95-0ecc6335e3f3" />
+
 
