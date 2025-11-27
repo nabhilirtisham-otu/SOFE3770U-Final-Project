@@ -3,16 +3,16 @@
         "r2": 0.6560883556730336,
         "mse": 0.001498343576005611,
         "mae": 0.03027549427174283,
-        "threshold": 0.6,
+        "threshold": 0.7500000000000001,
         "avg_soh": 0.8149627483270849,
-        "pass_count": 134,
-        "fail_count": 0
+        "pass_count": 119,
+        "fail_count": 15
     },
     "cells": [
         {
             "true soh": 0.7794761904761904,
             "predicted soh": 0.7407585923881888,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.8729523809523809,
@@ -37,7 +37,7 @@
         {
             "true soh": 0.7336190476190476,
             "predicted soh": 0.7296654906750666,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.8211904761904761,
@@ -127,7 +127,7 @@
         {
             "true soh": 0.6598095238095237,
             "predicted soh": 0.7191554901835877,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.8366666666666666,
@@ -252,12 +252,12 @@
         {
             "true soh": 0.7511904761904761,
             "predicted soh": 0.6808414421134037,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.6874761904761905,
             "predicted soh": 0.683275181698888,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.8378095238095238,
@@ -292,7 +292,7 @@
         {
             "true soh": 0.6598095238095237,
             "predicted soh": 0.7327437841419728,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.880904761904762,
@@ -347,7 +347,7 @@
         {
             "true soh": 0.6817619047619047,
             "predicted soh": 0.704989423064311,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.7122857142857143,
@@ -357,7 +357,7 @@
         {
             "true soh": 0.6598095238095237,
             "predicted soh": 0.7263961406565889,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.8366666666666666,
@@ -382,7 +382,7 @@
         {
             "true soh": 0.7522380952380953,
             "predicted soh": 0.730004804968515,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.831047619047619,
@@ -447,12 +447,12 @@
         {
             "true soh": 0.6817619047619047,
             "predicted soh": 0.7317050485262646,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.7675714285714286,
             "predicted soh": 0.707333667655127,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.8211904761904761,
@@ -462,7 +462,7 @@
         {
             "true soh": 0.8026666666666666,
             "predicted soh": 0.741127013592453,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.9111428571428571,
@@ -502,7 +502,7 @@
         {
             "true soh": 0.6995238095238095,
             "predicted soh": 0.7218398627135221,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.8209047619047619,
@@ -527,7 +527,7 @@
         {
             "true soh": 0.6195238095238095,
             "predicted soh": 0.7451533437126505,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.8204285714285714,
@@ -567,7 +567,7 @@
         {
             "true soh": 0.6874761904761905,
             "predicted soh": 0.6349789969606823,
-            "status": "pass"
+            "status": "fail"
         },
         {
             "true soh": 0.7988095238095237,

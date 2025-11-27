@@ -36,7 +36,7 @@ def get_gemini_response(user_input, battery_report):
         "state of health", "rul", "lifespan", "aging", "capacity fade",
         "fast charge", "overcharging", "overdischarge", "internal resistance",
         "impedance", "thermal runaway", "swelling", "fault",
-        "diagnostics", "maintenance", "prediction", "health monitoring"
+        "diagnostics", "maintenance", "prediction", "health monitoring", "maintain"
     ]
 
     #ignore user input if no words are in defined words above
