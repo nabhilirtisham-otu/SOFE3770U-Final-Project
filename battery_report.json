@@ -1,706 +1,706 @@
 {
     "metrics": {
-        "r2": 0.6560883556730336,
-        "mse": 0.001498343576005611,
-        "mae": 0.03027549427174283,
-        "threshold": 0.7500000000000001,
-        "avg_soh": 0.8149627483270849,
-        "pass_count": 119,
-        "fail_count": 15
+        "r2": 0.6560883556730057,
+        "mse": 0.0014983435760057325,
+        "mae": 0.03027549427174601,
+        "threshold": 0.6,
+        "avg_soh": 0.814962748327067,
+        "pass_count": 134,
+        "fail_count": 0
     },
     "cells": [
         {
             "true soh": 0.7794761904761904,
-            "predicted soh": 0.7407585923881888,
-            "status": "fail"
+            "predicted soh": 0.7407585923881692,
+            "status": "pass"
         },
         {
             "true soh": 0.8729523809523809,
-            "predicted soh": 0.8742591626714207,
+            "predicted soh": 0.874259162671394,
             "status": "pass"
         },
         {
             "true soh": 0.7672380952380952,
-            "predicted soh": 0.8352567294068427,
+            "predicted soh": 0.8352567294068232,
             "status": "pass"
         },
         {
             "true soh": 0.830952380952381,
-            "predicted soh": 0.7806906731366388,
+            "predicted soh": 0.7806906731365979,
             "status": "pass"
         },
         {
             "true soh": 0.8784761904761904,
-            "predicted soh": 0.8878941473633253,
+            "predicted soh": 0.8878941473632986,
             "status": "pass"
         },
         {
             "true soh": 0.7336190476190476,
-            "predicted soh": 0.7296654906750666,
-            "status": "fail"
+            "predicted soh": 0.7296654906750186,
+            "status": "pass"
         },
         {
             "true soh": 0.8211904761904761,
-            "predicted soh": 0.8055108733671537,
+            "predicted soh": 0.8055108733670986,
             "status": "pass"
         },
         {
             "true soh": 0.6987619047619047,
-            "predicted soh": 0.7814921117866538,
+            "predicted soh": 0.7814921117866414,
             "status": "pass"
         },
         {
             "true soh": 0.8173333333333332,
-            "predicted soh": 0.8068711744979202,
+            "predicted soh": 0.8068711744979575,
             "status": "pass"
         },
         {
             "true soh": 0.9045238095238095,
-            "predicted soh": 0.946880732416246,
+            "predicted soh": 0.946880732416262,
             "status": "pass"
         },
         {
             "true soh": 0.8417142857142857,
-            "predicted soh": 0.8559712965904671,
+            "predicted soh": 0.8559712965904192,
             "status": "pass"
         },
         {
             "true soh": 0.8571904761904762,
-            "predicted soh": 0.8994360153258603,
+            "predicted soh": 0.8994360153258478,
             "status": "pass"
         },
         {
             "true soh": 0.8473333333333334,
-            "predicted soh": 0.807249443145813,
+            "predicted soh": 0.8072494431457935,
             "status": "pass"
         },
         {
             "true soh": 0.8204285714285714,
-            "predicted soh": 0.8470144036435121,
+            "predicted soh": 0.8470144036434855,
             "status": "pass"
         },
         {
             "true soh": 0.7983333333333333,
-            "predicted soh": 0.8132274294196398,
+            "predicted soh": 0.8132274294196415,
             "status": "pass"
         },
         {
             "true soh": 0.8571904761904762,
-            "predicted soh": 0.8843057387020741,
+            "predicted soh": 0.8843057387020901,
             "status": "pass"
         },
         {
             "true soh": 0.8173333333333332,
-            "predicted soh": 0.7685520186161119,
+            "predicted soh": 0.768552018616071,
             "status": "pass"
         },
         {
             "true soh": 0.7368571428571429,
-            "predicted soh": 0.7940694114436075,
+            "predicted soh": 0.7940694114435596,
             "status": "pass"
         },
         {
             "true soh": 0.7809999999999999,
-            "predicted soh": 0.7889593880873909,
+            "predicted soh": 0.7889593880873642,
             "status": "pass"
         },
         {
             "true soh": 0.7886666666666666,
-            "predicted soh": 0.8212965619964256,
+            "predicted soh": 0.821296561996399,
             "status": "pass"
         },
         {
             "true soh": 0.8211904761904761,
-            "predicted soh": 0.8060628895623756,
+            "predicted soh": 0.8060628895623134,
             "status": "pass"
         },
         {
             "true soh": 0.9111428571428571,
-            "predicted soh": 0.835348424759899,
+            "predicted soh": 0.8353484247598795,
             "status": "pass"
         },
         {
             "true soh": 0.8209047619047619,
-            "predicted soh": 0.779016289447525,
+            "predicted soh": 0.7790162894475339,
             "status": "pass"
         },
         {
             "true soh": 0.6598095238095237,
-            "predicted soh": 0.7191554901835877,
-            "status": "fail"
+            "predicted soh": 0.7191554901835326,
+            "status": "pass"
         },
         {
             "true soh": 0.8366666666666666,
-            "predicted soh": 0.8101647113966726,
+            "predicted soh": 0.8101647113966459,
             "status": "pass"
         },
         {
             "true soh": 0.8278095238095238,
-            "predicted soh": 0.8595347576353296,
+            "predicted soh": 0.859534757635303,
             "status": "pass"
         },
         {
             "true soh": 0.7511904761904761,
-            "predicted soh": 0.7608338770210485,
+            "predicted soh": 0.7608338770210716,
             "status": "pass"
         },
         {
             "true soh": 0.8546666666666666,
-            "predicted soh": 0.8189691476017051,
+            "predicted soh": 0.8189691476016927,
             "status": "pass"
         },
         {
             "true soh": 0.8702380952380951,
-            "predicted soh": 0.8116214302436466,
+            "predicted soh": 0.8116214302436413,
             "status": "pass"
         },
         {
             "true soh": 0.8278095238095238,
-            "predicted soh": 0.8459835741345847,
+            "predicted soh": 0.845983574134558,
             "status": "pass"
         },
         {
             "true soh": 0.9229999999999999,
-            "predicted soh": 0.8797558831846137,
+            "predicted soh": 0.8797558831845871,
             "status": "pass"
         },
         {
             "true soh": 0.9072380952380952,
-            "predicted soh": 0.8411292725975477,
+            "predicted soh": 0.8411292725975423,
             "status": "pass"
         },
         {
             "true soh": 0.7819523809523808,
-            "predicted soh": 0.8181841999377033,
+            "predicted soh": 0.818184199937698,
             "status": "pass"
         },
         {
             "true soh": 0.880904761904762,
-            "predicted soh": 0.8885328831176258,
+            "predicted soh": 0.8885328831175565,
             "status": "pass"
         },
         {
             "true soh": 0.8573333333333333,
-            "predicted soh": 0.8448964636030132,
+            "predicted soh": 0.844896463603015,
             "status": "pass"
         },
         {
             "true soh": 0.9229999999999999,
-            "predicted soh": 0.9503163736181994,
+            "predicted soh": 0.9503163736182296,
             "status": "pass"
         },
         {
             "true soh": 0.715047619047619,
-            "predicted soh": 0.7540573362572607,
+            "predicted soh": 0.7540573362572269,
             "status": "pass"
         },
         {
             "true soh": 0.7886666666666666,
-            "predicted soh": 0.805795758864206,
+            "predicted soh": 0.8057957588641509,
             "status": "pass"
         },
         {
             "true soh": 0.7983333333333333,
-            "predicted soh": 0.7746096722630602,
+            "predicted soh": 0.7746096722630549,
             "status": "pass"
         },
         {
             "true soh": 0.8173333333333332,
-            "predicted soh": 0.7671544567484139,
+            "predicted soh": 0.7671544567483801,
             "status": "pass"
         },
         {
             "true soh": 0.8211904761904761,
-            "predicted soh": 0.8186424385467168,
+            "predicted soh": 0.8186424385466973,
             "status": "pass"
         },
         {
             "true soh": 0.9121904761904761,
-            "predicted soh": 0.877862095632806,
+            "predicted soh": 0.8778620956327368,
             "status": "pass"
         },
         {
             "true soh": 0.7809999999999999,
-            "predicted soh": 0.76105787244009,
+            "predicted soh": 0.7610578724400492,
             "status": "pass"
         },
         {
             "true soh": 0.8378095238095238,
-            "predicted soh": 0.8006315130073736,
+            "predicted soh": 0.8006315130073469,
             "status": "pass"
         },
         {
             "true soh": 0.8204285714285714,
-            "predicted soh": 0.8265383833667164,
+            "predicted soh": 0.8265383833666897,
             "status": "pass"
         },
         {
             "true soh": 0.8378095238095238,
-            "predicted soh": 0.8032478031418568,
+            "predicted soh": 0.8032478031418373,
             "status": "pass"
         },
         {
             "true soh": 0.7886666666666666,
-            "predicted soh": 0.8242149172915196,
+            "predicted soh": 0.8242149172914788,
             "status": "pass"
         },
         {
             "true soh": 0.9121904761904761,
-            "predicted soh": 0.8829617487736448,
+            "predicted soh": 0.882961748773611,
             "status": "pass"
         },
         {
             "true soh": 0.7511904761904761,
-            "predicted soh": 0.6808414421134037,
-            "status": "fail"
+            "predicted soh": 0.6808414421134126,
+            "status": "pass"
         },
         {
             "true soh": 0.6874761904761905,
-            "predicted soh": 0.683275181698888,
-            "status": "fail"
+            "predicted soh": 0.6832751816988614,
+            "status": "pass"
         },
         {
             "true soh": 0.8378095238095238,
-            "predicted soh": 0.8150034447581538,
+            "predicted soh": 0.8150034447581342,
             "status": "pass"
         },
         {
             "true soh": 0.7672380952380952,
-            "predicted soh": 0.7604607211077754,
+            "predicted soh": 0.7604607211077345,
             "status": "pass"
         },
         {
             "true soh": 0.7983333333333333,
-            "predicted soh": 0.8059603632732992,
+            "predicted soh": 0.8059603632732726,
             "status": "pass"
         },
         {
             "true soh": 0.9229999999999999,
-            "predicted soh": 0.850703007844138,
+            "predicted soh": 0.8507030078441185,
             "status": "pass"
         },
         {
             "true soh": 0.7672380952380952,
-            "predicted soh": 0.7848360681151041,
+            "predicted soh": 0.7848360681150703,
             "status": "pass"
         },
         {
             "true soh": 0.8607619047619047,
-            "predicted soh": 0.8126611691705525,
+            "predicted soh": 0.8126611691705969,
             "status": "pass"
         },
         {
             "true soh": 0.6598095238095237,
-            "predicted soh": 0.7327437841419728,
-            "status": "fail"
+            "predicted soh": 0.7327437841419107,
+            "status": "pass"
         },
         {
             "true soh": 0.880904761904762,
-            "predicted soh": 0.8558263898382199,
+            "predicted soh": 0.8558263898382217,
             "status": "pass"
         },
         {
             "true soh": 0.9072380952380952,
-            "predicted soh": 0.8875515054672922,
+            "predicted soh": 0.8875515054672727,
             "status": "pass"
         },
         {
             "true soh": 0.8546666666666666,
-            "predicted soh": 0.8531063384041664,
+            "predicted soh": 0.8531063384040971,
             "status": "pass"
         },
         {
             "true soh": 0.8366666666666666,
-            "predicted soh": 0.8394034127160657,
+            "predicted soh": 0.8394034127160532,
             "status": "pass"
         },
         {
             "true soh": 0.8512380952380952,
-            "predicted soh": 0.7934400007739759,
+            "predicted soh": 0.7934400007739493,
             "status": "pass"
         },
         {
             "true soh": 0.8573333333333333,
-            "predicted soh": 0.846878025784604,
+            "predicted soh": 0.8468780257845916,
             "status": "pass"
         },
         {
             "true soh": 0.7809999999999999,
-            "predicted soh": 0.818544270323506,
+            "predicted soh": 0.8185442703234935,
             "status": "pass"
         },
         {
             "true soh": 0.8946190476190476,
-            "predicted soh": 0.8546667924422655,
+            "predicted soh": 0.8546667924422602,
             "status": "pass"
         },
         {
             "true soh": 0.8956666666666666,
-            "predicted soh": 0.8187380131765059,
+            "predicted soh": 0.8187380131764863,
             "status": "pass"
         },
         {
             "true soh": 0.8729523809523809,
-            "predicted soh": 0.8321499293169259,
+            "predicted soh": 0.8321499293168779,
             "status": "pass"
         },
         {
             "true soh": 0.6817619047619047,
-            "predicted soh": 0.704989423064311,
-            "status": "fail"
+            "predicted soh": 0.7049894230642986,
+            "status": "pass"
         },
         {
             "true soh": 0.7122857142857143,
-            "predicted soh": 0.755609365473247,
+            "predicted soh": 0.7556093654732345,
             "status": "pass"
         },
         {
             "true soh": 0.6598095238095237,
-            "predicted soh": 0.7263961406565889,
-            "status": "fail"
+            "predicted soh": 0.7263961406565622,
+            "status": "pass"
         },
         {
             "true soh": 0.8366666666666666,
-            "predicted soh": 0.8306309856167919,
+            "predicted soh": 0.8306309856167937,
             "status": "pass"
         },
         {
             "true soh": 0.8573333333333333,
-            "predicted soh": 0.8606285896382806,
+            "predicted soh": 0.8606285896382753,
             "status": "pass"
         },
         {
             "true soh": 0.8729523809523809,
-            "predicted soh": 0.863205512787089,
+            "predicted soh": 0.8632055127870624,
             "status": "pass"
         },
         {
             "true soh": 0.7122857142857143,
-            "predicted soh": 0.7598607819871424,
+            "predicted soh": 0.7598607819871228,
             "status": "pass"
         },
         {
             "true soh": 0.7522380952380953,
-            "predicted soh": 0.730004804968515,
-            "status": "fail"
-        },
-        {
-            "true soh": 0.831047619047619,
-            "predicted soh": 0.8266485266605406,
+            "predicted soh": 0.7300048049684955,
             "status": "pass"
         },
         {
             "true soh": 0.831047619047619,
-            "predicted soh": 0.812700349043765,
+            "predicted soh": 0.8266485266605565,
+            "status": "pass"
+        },
+        {
+            "true soh": 0.831047619047619,
+            "predicted soh": 0.8127003490437739,
             "status": "pass"
         },
         {
             "true soh": 0.8206666666666667,
-            "predicted soh": 0.8167627560399415,
+            "predicted soh": 0.8167627560399433,
             "status": "pass"
         },
         {
             "true soh": 0.8366666666666666,
-            "predicted soh": 0.8159563634923392,
+            "predicted soh": 0.8159563634923268,
             "status": "pass"
         },
         {
             "true soh": 0.8512380952380952,
-            "predicted soh": 0.7923829156692994,
+            "predicted soh": 0.792382915669287,
             "status": "pass"
         },
         {
             "true soh": 0.6995238095238095,
-            "predicted soh": 0.804292381676972,
+            "predicted soh": 0.8042923816769525,
             "status": "pass"
         },
         {
             "true soh": 0.8211904761904761,
-            "predicted soh": 0.8107940710077051,
+            "predicted soh": 0.8107940710077068,
             "status": "pass"
         },
         {
             "true soh": 0.880904761904762,
-            "predicted soh": 0.8377712346812762,
+            "predicted soh": 0.8377712346812851,
             "status": "pass"
         },
         {
             "true soh": 0.6987619047619047,
-            "predicted soh": 0.7549613576898357,
+            "predicted soh": 0.7549613576898233,
             "status": "pass"
         },
         {
             "true soh": 0.8417142857142857,
-            "predicted soh": 0.8481708531732997,
+            "predicted soh": 0.8481708531733299,
             "status": "pass"
         },
         {
             "true soh": 0.7712857142857142,
-            "predicted soh": 0.7907981941716278,
+            "predicted soh": 0.7907981941716153,
             "status": "pass"
         },
         {
             "true soh": 0.8417142857142857,
-            "predicted soh": 0.8535146708944259,
+            "predicted soh": 0.8535146708944419,
             "status": "pass"
         },
         {
             "true soh": 0.6817619047619047,
-            "predicted soh": 0.7317050485262646,
-            "status": "fail"
+            "predicted soh": 0.7317050485262167,
+            "status": "pass"
         },
         {
             "true soh": 0.7675714285714286,
-            "predicted soh": 0.707333667655127,
-            "status": "fail"
+            "predicted soh": 0.7073336676551287,
+            "status": "pass"
         },
         {
             "true soh": 0.8211904761904761,
-            "predicted soh": 0.8293511540944811,
+            "predicted soh": 0.8293511540944474,
             "status": "pass"
         },
         {
             "true soh": 0.8026666666666666,
-            "predicted soh": 0.741127013592453,
-            "status": "fail"
+            "predicted soh": 0.7411270135924619,
+            "status": "pass"
         },
         {
             "true soh": 0.9111428571428571,
-            "predicted soh": 0.9619530286911191,
+            "predicted soh": 0.9619530286911138,
             "status": "pass"
         },
         {
             "true soh": 0.8473333333333334,
-            "predicted soh": 0.8278706805624614,
+            "predicted soh": 0.827870680562449,
             "status": "pass"
         },
         {
             "true soh": 0.8571904761904762,
-            "predicted soh": 0.8107553614769989,
+            "predicted soh": 0.8107553614770078,
             "status": "pass"
         },
         {
             "true soh": 0.8278095238095238,
-            "predicted soh": 0.8328935340004611,
+            "predicted soh": 0.832893534000406,
             "status": "pass"
         },
         {
             "true soh": 0.8888095238095238,
-            "predicted soh": 0.8269209758870977,
+            "predicted soh": 0.8269209758870568,
             "status": "pass"
         },
         {
             "true soh": 0.7815238095238095,
-            "predicted soh": 0.8339865506286221,
+            "predicted soh": 0.8339865506286239,
             "status": "pass"
         },
         {
             "true soh": 0.8571904761904762,
-            "predicted soh": 0.8714267534974587,
+            "predicted soh": 0.8714267534974462,
             "status": "pass"
         },
         {
             "true soh": 0.6995238095238095,
-            "predicted soh": 0.7218398627135221,
-            "status": "fail"
+            "predicted soh": 0.721839862713531,
+            "status": "pass"
         },
         {
             "true soh": 0.8209047619047619,
-            "predicted soh": 0.7983705743511456,
+            "predicted soh": 0.7983705743511047,
             "status": "pass"
         },
         {
             "true soh": 0.8473333333333334,
-            "predicted soh": 0.8343729842053227,
+            "predicted soh": 0.8343729842052818,
             "status": "pass"
         },
         {
             "true soh": 0.8956666666666666,
-            "predicted soh": 0.8792469867679591,
+            "predicted soh": 0.8792469867678898,
             "status": "pass"
         },
         {
             "true soh": 0.870095238095238,
-            "predicted soh": 0.852880445221202,
+            "predicted soh": 0.8528804452212038,
             "status": "pass"
         },
         {
             "true soh": 0.6195238095238095,
-            "predicted soh": 0.7451533437126505,
-            "status": "fail"
+            "predicted soh": 0.7451533437126381,
+            "status": "pass"
         },
         {
             "true soh": 0.8204285714285714,
-            "predicted soh": 0.8183505587319564,
+            "predicted soh": 0.8183505587319866,
             "status": "pass"
         },
         {
             "true soh": 0.855,
-            "predicted soh": 0.8389920382561931,
+            "predicted soh": 0.8389920382561451,
             "status": "pass"
         },
         {
             "true soh": 0.6987619047619047,
-            "predicted soh": 0.8032528151067018,
+            "predicted soh": 0.803252815106732,
             "status": "pass"
         },
         {
             "true soh": 0.8702380952380951,
-            "predicted soh": 0.8731107971713206,
+            "predicted soh": 0.873110797171365,
             "status": "pass"
         },
         {
             "true soh": 0.8378095238095238,
-            "predicted soh": 0.8281702139191784,
+            "predicted soh": 0.8281702139191234,
             "status": "pass"
         },
         {
             "true soh": 0.8702380952380951,
-            "predicted soh": 0.8761317035443019,
+            "predicted soh": 0.8761317035442397,
             "status": "pass"
         },
         {
             "true soh": 0.8173333333333332,
-            "predicted soh": 0.767037030574584,
+            "predicted soh": 0.767037030574536,
             "status": "pass"
         },
         {
             "true soh": 0.6874761904761905,
-            "predicted soh": 0.6349789969606823,
-            "status": "fail"
+            "predicted soh": 0.6349789969606485,
+            "status": "pass"
         },
         {
             "true soh": 0.7988095238095237,
-            "predicted soh": 0.810786266559929,
+            "predicted soh": 0.8107862665599379,
             "status": "pass"
         },
         {
             "true soh": 0.8546666666666666,
-            "predicted soh": 0.8252806822222558,
+            "predicted soh": 0.8252806822222363,
             "status": "pass"
         },
         {
             "true soh": 0.7488571428571428,
-            "predicted soh": 0.7634717626277725,
+            "predicted soh": 0.7634717626277956,
             "status": "pass"
         },
         {
             "true soh": 0.6987619047619047,
-            "predicted soh": 0.762579571470325,
+            "predicted soh": 0.7625795714702983,
             "status": "pass"
         },
         {
             "true soh": 0.8473333333333334,
-            "predicted soh": 0.8291976648940311,
+            "predicted soh": 0.8291976648939903,
             "status": "pass"
         },
         {
             "true soh": 0.7712857142857142,
-            "predicted soh": 0.7881710834625926,
+            "predicted soh": 0.7881710834626015,
             "status": "pass"
         },
         {
             "true soh": 0.8729523809523809,
-            "predicted soh": 0.8532636318132907,
+            "predicted soh": 0.8532636318133209,
             "status": "pass"
         },
         {
             "true soh": 0.8784761904761904,
-            "predicted soh": 0.8987854671373432,
+            "predicted soh": 0.8987854671373023,
             "status": "pass"
         },
         {
             "true soh": 0.9229999999999999,
-            "predicted soh": 0.9132050254715187,
+            "predicted soh": 0.9132050254715063,
             "status": "pass"
         },
         {
             "true soh": 0.831047619047619,
-            "predicted soh": 0.8458548986344985,
+            "predicted soh": 0.8458548986344576,
             "status": "pass"
         },
         {
             "true soh": 0.8026666666666666,
-            "predicted soh": 0.8025980375979733,
+            "predicted soh": 0.8025980375979893,
             "status": "pass"
         },
         {
             "true soh": 0.870095238095238,
-            "predicted soh": 0.8415193087115247,
+            "predicted soh": 0.8415193087115052,
             "status": "pass"
         },
         {
             "true soh": 0.7988095238095237,
-            "predicted soh": 0.7875589666497111,
+            "predicted soh": 0.7875589666496561,
             "status": "pass"
         },
         {
             "true soh": 0.7983333333333333,
-            "predicted soh": 0.7997624833710395,
+            "predicted soh": 0.7997624833710697,
             "status": "pass"
         },
         {
             "true soh": 0.8061428571428572,
-            "predicted soh": 0.8102473507440626,
+            "predicted soh": 0.8102473507440644,
             "status": "pass"
         },
         {
             "true soh": 0.9121904761904761,
-            "predicted soh": 0.8816536418002903,
+            "predicted soh": 0.8816536418002636,
             "status": "pass"
         },
         {
             "true soh": 0.870095238095238,
-            "predicted soh": 0.8429082086301483,
+            "predicted soh": 0.8429082086301145,
             "status": "pass"
         },
         {
             "true soh": 0.831047619047619,
-            "predicted soh": 0.8337650036755084,
+            "predicted soh": 0.8337650036754889,
             "status": "pass"
         },
         {
             "true soh": 0.8725714285714286,
-            "predicted soh": 0.831370639416213,
+            "predicted soh": 0.8313706394161651,
             "status": "pass"
         },
         {
             "true soh": 0.8061428571428572,
-            "predicted soh": 0.8384519168496487,
+            "predicted soh": 0.8384519168496292,
             "status": "pass"
         },
         {
             "true soh": 0.7672380952380952,
-            "predicted soh": 0.7775758063391969,
+            "predicted soh": 0.77757580633918,
             "status": "pass"
         },
         {
             "true soh": 0.8725714285714286,
-            "predicted soh": 0.8612785399823331,
+            "predicted soh": 0.8612785399823375,
             "status": "pass"
         }
     ],
     "feature_importance": {
-        "U17": 42.93852230199879,
-        "U3": -13.680280624331804,
-        "U7": -10.755158749784702,
-        "U21": -10.027137311452016,
-        "U9": -8.810711038498392,
-        "U5": 6.852395855963971,
-        "U1": 6.525140508537594,
-        "U13": -5.493416645672575,
-        "U11": -4.299611180092708,
-        "U19": -3.7377720373769767,
-        "U15": -3.1474975319429914,
-        "U12": 1.0889110147244727,
-        "U14": 1.0659714147304291,
-        "U6": -1.038548704284021,
-        "U18": -0.8623608488433049,
-        "U8": 0.6058412454906307,
-        "U4": 0.5829629263856845,
-        "U10": 0.4647636650518354,
-        "U2": 0.3755366662853199,
-        "U16": 0.3728958269583441,
-        "U20": 0.09293518663700462
+        "U17": 42.9385223019988,
+        "U3": -13.680280624331923,
+        "U7": -10.75515874978479,
+        "U21": -10.02713731145198,
+        "U9": -8.810711038498397,
+        "U5": 6.852395855964121,
+        "U1": 6.5251405085377465,
+        "U13": -5.4934166456726885,
+        "U11": -4.299611180092735,
+        "U19": -3.7377720373769403,
+        "U15": -3.1474975319429594,
+        "U12": 1.0889110147244643,
+        "U14": 1.0659714147304282,
+        "U6": -1.0385487042840378,
+        "U18": -0.8623608488432999,
+        "U8": 0.6058412454905886,
+        "U4": 0.5829629263856818,
+        "U10": 0.4647636650518365,
+        "U2": 0.37553666628533033,
+        "U16": 0.3728958269583423,
+        "U20": 0.09293518663699976
     }
 }

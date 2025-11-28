@@ -17,14 +17,15 @@ PLOT_FILE = os.path.join(BASE_DIR, "soh_plot.png")
 
 #streamlit page styling
 st.title("Battery Health Assistant")
-st.caption("SOH Prediction + Gemini AI Advisor")
 st.header("Battery Advisor")
 
-#creates user input box 
+#creates user input box
 user_msg = st.text_input("Ask about battery health, charging, lifespan, or safety:")
 
 #initialize report
 report = None
+
+st.header("Predicted SOH based on file:")
 
 #load results file if it exists
 if os.path.exists(REPORT_FILE):
@@ -57,7 +58,7 @@ if st.button("Ask AI"):
 #streamlit styling
 st.header("Linear Regression Model")
 
-#threshold scaler 
+#threshold scaler
 threshold = st.number_input(
     "SOH Fail Threshold",
     min_value=0.0,
@@ -121,7 +122,3 @@ if st.button("Run SOH Prediction Model"):
             st.error("battery_report.json exists but could not be read.")
     else:
         st.warning("battery_report.json not generated.")
-
-#streamlit styling 
-st.markdown("---")
-st.caption("SOFE3770U Final Project | Battery Health AI")
